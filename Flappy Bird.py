@@ -1,4 +1,4 @@
-#My First Python game: Flappy Bird
+#My Second Python game: Flappy Bird
 #Kai Wang, August 14, 2019
 import random
 import pygame
