@@ -5,17 +5,15 @@ import pygame
 import sys
 
 class FlappyBird():
-
     def __init__(self):
-        
-        #environment parameters
+        # environment parameters
         self.screenWidth = 1200
         self.screenHeight = 700
         pygame.init()
         self.gameWindow = pygame.display.set_mode( (self.screenWidth, self.screenHeight) ) 
         pygame.display.set_caption("Flappy Bird by Kai Wang")
 
-        #game parameters
+        # game parameters
         self.gravityValue = 1
         self.gameSpeed = 10
         self.score = 0
@@ -25,7 +23,7 @@ class FlappyBird():
         self.pipes = []
         self.frame = 0
         
-        #begin running the game
+        # begin running the game
         self.runGame()
 
     def gravity(self):
@@ -134,12 +132,12 @@ class Pipe():
         self.width = width
         self.height = height
 
-        self.pipe1Image = pygame.image.load("pipe1.png")
+        self.pipe1Image = pygame.image.load("pipe.png")
         self.pipe1Image = pygame.transform.scale(self.pipe1Image, (self.width, self.top))
         self.pipe1Image = pygame.transform.flip(self.pipe1Image, False, True)
         self.pipe1Rect = pygame.Rect(self.left, 0, self.width, self.height)
 
-        self.pipe2Image = pygame.image.load("pipe1.png")
+        self.pipe2Image = pygame.image.load("pipe.png")
         self.pipe2Image = pygame.transform.scale(self.pipe2Image, (self.width, screenHeight - self.top - self.height))
         self.pipe2Rect = pygame.Rect(self.left, self.top + self.height, self.width, screenHeight - self.top - self.height)
 
